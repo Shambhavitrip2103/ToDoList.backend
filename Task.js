@@ -1,21 +1,14 @@
-import React from 'react';
+const mongoose = require('mongoose');
 
-const Task = ({ task, onDelete, onUpdate }) => {
-    return (
-        <div className="task">
-            <input
-                type="checkbox"
-                checked={task.completed}
-                onChange={() => onUpdate(task._id, { ...task, completed: !task.completed })}
-            />
-            <input
-                type="text"
-                value={task.title}
-                onChange={(e) => onUpdate(task._id, { ...task, title: e.target.value })}
-            />
-            <button onClick={() => onDelete(task._id)}>Delete</button>
-        </div>
-    );
-};
+const taskSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true,
+  },
+  completed: {
+    type: Boolean,
+    default: false,
+  },
+});
 
-export default Task;
+module.exports = mongoose.model('Task', taskSchema);
