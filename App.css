@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #209f94;
+  margin: 265px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.App {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 50px; /* Add some margin to avoid the navbar */
+  background-color: rgba(255, 255, 255, 0.721);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(16, 14, 5, 0.1);
+  border-width: 10px;
+  border-style:dashed ;
+  border-color: rgba(53, 71, 182, 0.867);
+
+}
+
+.navbar {
+  width: 100%;
+  background-color: #c64c34;
+  color: rgb(13, 40, 34);
+  border: 10px;
+  border-right: 10px;
+  border-color: #cc6bd3;
+  border-style: ridge;
+  padding: 20px;
+  text-decoration-line: overline;
+  text-align: center;
+  text-decoration:overline;
+  text-shadow:5px #e6d7d4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-radius:2px #1a4845;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  color: rgba(220, 96, 220, 0.947);
+}
+
+.task input[type="text"] {
+  border: 1px solid #0b2d0d;
+  border-radius: 5px;
+  padding: 5px;
+  width: 70%;
+}
+
+.task-list {
+  margin-top: 20px;
+}
+
+button {
+  background-color: #cc6bd3;
+  color: rgb(1, 3, 26);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #240c0c;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 10px;
+}
